@@ -290,7 +290,21 @@ HAVING 集計関数を利用した抽出条件
 - サブクエリーは色々場所で活用できるので、今後利用できるようにまとめておきたいね
 
 
-
+# 8. csvを保存するときに
+- まずは、csvデータを保存してみる。多分エラーが出るはず。
+  - その場合まずは、自分のSQLがcsvをどこに保存しようとしているのかを確認する
+  ```
+  SELECT @@global.secure_file_priv;
+  ```
+  - この処理結果に表示されているところにcsvデータなどを保存することができる
+  - 空白の場合は、どこでも保存可能
+  - NULLの場合はどこにも保存できない
+  
+  - その場合は、下記のリンクなどを参照しながら保存先などの設定をいじると良い
+  - [保存先の確認方法](https://weblabo.oscasierra.net/mysql-select-into-outfile/)
+  - [保存先の設定方法](https://qiita.com/kiyodori/items/7281a5bdcfbcbbe03c68)
+  - [Vim/Viのいじり方](https://qiita.com/kon_yu/items/b8864ff566b8b67a9810)
+  
 
 
 
